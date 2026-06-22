@@ -137,6 +137,62 @@ input, textarea{
 .hero{
   padding-top:85px;
 }
+  #contact-form{
+
+max-width:600px;
+margin:auto;
+
+display:flex;
+flex-direction:column;
+gap:15px;
+
+}
+
+#contact-form input,
+#contact-form textarea{
+
+padding:15px;
+border:none;
+border-radius:8px;
+
+font-size:16px;
+
+}
+
+#contact-form textarea{
+
+height:150px;
+resize:none;
+
+}
+
+#contact-form button{
+
+padding:15px;
+
+background:#00b4d8;
+color:white;
+
+border:none;
+border-radius:8px;
+
+font-size:18px;
+cursor:pointer;
+
+}
+
+#contact-form button:hover{
+
+opacity:.9;
+
+}
+
+#success{
+
+margin-top:20px;
+font-size:18px;
+
+}
 </style>
 </head>
 <body>
@@ -305,9 +361,15 @@ managed services, ISP and healthcare sectors while supporting mission-critical i
     <p>Email: myomyatpaing5555@gmail.com</p>
   </div>
 
-  <div>
-    <form id="contact-form">
-      <input type="text"
+  <section class="contact" id="contact">
+
+<h2 class="section-title" style="color:white;">
+Contact Us
+</h2>
+
+<form id="contact-form">
+
+<input type="text"
 id="name"
 placeholder="Your Name"
 required>
@@ -325,15 +387,21 @@ required>
 <textarea
 id="message"
 placeholder="Your Message"
-required> </textarea>
-      <button class="btn" type="submit">Send Message</button>
-    </form>
-  </div>
-</section>
+required></textarea>
+
+<button type="button"
+onclick="sendMail()">
+Send Message
+</button>
+
+</form>
+
 <div id="success"></div>
 
 </section>
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</section>
+
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
 <script>
 
@@ -392,12 +460,9 @@ console.log(error);
 
 </script>
 
+</section>
 
-<script>
-function toggleMenu(){
-  document.getElementById("menu").classList.toggle("show");
-}
-</script>
+  
 <footer>
 © 2026 Myo Myat Paing | IT Network & Security Consultant
 </footer>
